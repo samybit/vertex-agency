@@ -1,5 +1,16 @@
 @use '../abstracts' as a;
 
+// --- STICKY FOOTER ---
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
 // Main wrapper
 .container {
     max-width: 1200px;

@@ -10,6 +10,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 body {
@@ -58,6 +59,16 @@ p {
   margin-bottom: 1.5rem;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -89,7 +100,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .navbar__logo {
   font-size: 2.4rem;
