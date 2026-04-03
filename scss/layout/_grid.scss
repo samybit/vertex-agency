@@ -1,0 +1,23 @@
+@use '../abstracts' as a;
+
+// Main wrapper
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+// Reusable padding for major sections
+.section {
+    padding: 8rem 0;
+
+    // Media query mixin for mobile spacing
+    @include a.respond(phone) {
+        padding: 4rem 0;
+    }
+}
+
+// Utility class for the jQuery fade-in
+.fade-in {
+    display: none;
+}

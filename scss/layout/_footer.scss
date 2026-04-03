@@ -1,0 +1,14 @@
+@use '../abstracts' as a;
+
+.footer {
+    background-color: a.$color-secondary;
+    color: a.$color-white;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: auto;
+
+    &__text {
+        font-size: 1.4rem;
+        opacity: 0.8;
+    }
+}
