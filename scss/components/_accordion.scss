@@ -1,0 +1,52 @@
+@use '../abstracts' as a;
+@use 'sass:color';
+
+.accordion {
+    max-width: 80rem;
+    margin: 0 auto;
+
+    &__item {
+        background-color: a.$color-white;
+        margin-bottom: 1.5rem;
+        border-radius: 0.4rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+
+    &__header {
+        padding: 2rem;
+        cursor: pointer;
+        background-color: a.$color-secondary;
+        color: a.$color-white;
+        font-weight: 600;
+        font-size: 1.8rem;
+        transition: background-color a.$transition-fast;
+
+        // Flexbox to push the +/- icon to the right
+        @include a.flex-between;
+
+        &:hover {
+            background-color: color.scale(a.$color-secondary, $lightness: 10%);
+        }
+
+        // The + icon
+        &::after {
+            content: '+';
+            font-size: 2.4rem;
+            font-weight: 400;
+        }
+
+        // 'active' class, change + to -
+        &.active::after {
+            content: '-';
+        }
+    }
+
+    &__body {
+        display: none; // Handled by jQuery slideToggle
+        padding: 2rem;
+        border-top: 1px solid #e2e8f0;
+        background-color: a.$color-white;
+        color: a.$color-text;
+    }
+}

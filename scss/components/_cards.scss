@@ -1,0 +1,27 @@
+@use '../abstracts' as a;
+
+.card {
+    background-color: a.$color-white;
+    padding: 3rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform a.$transition-fast, box-shadow a.$transition-fast;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    &__icon {
+        font-size: 4rem;
+        color: a.$color-primary;
+        margin-bottom: 1.5rem;
+    }
+
+    &__title {
+        color: a.$color-secondary;
+        margin-bottom: 1rem;
+        font-size: 2.2rem;
+    }
+}

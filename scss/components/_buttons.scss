@@ -1,0 +1,33 @@
+@use '../abstracts' as a;
+@use 'sass:color';
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background-color: a.$color-primary;
+    color: a.$color-white;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color a.$transition-fast, transform a.$transition-fast;
+
+    &:hover {
+        // Scales the lightness down by 15%
+        background-color: color.scale(a.$color-primary, $lightness: -15%);
+        transform: translateY(-2px);
+    }
+
+    // A secondary button modifier
+    &--outline {
+        background-color: transparent;
+        color: a.$color-primary;
+        border: 2px solid a.$color-primary;
+
+        &:hover {
+            background-color: a.$color-primary;
+            color: a.$color-white;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@use '../abstracts' as a;
+
+.form {
+    max-width: 60rem;
+    margin: 0 auto;
+    background-color: a.$color-white;
+    padding: 4rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    &__group {
+        margin-bottom: 2rem;
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: 1.5rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 0.4rem;
+        font-family: inherit;
+        font-size: 1.6rem;
+        transition: border-color a.$transition-fast;
+
+        &:focus {
+            outline: none;
+            border-color: a.$color-primary;
+        }
+    }
+
+    &__textarea {
+        resize: vertical;
+        min-height: 12rem;
+    }
+
+    // Error message
+    &__error-msg {
+        display: none;
+        color: #ef4444;
+        font-size: 1.4rem;
+        margin-top: 0.5rem;
+    }
+
+    // "error" class to the form__group
+    &__group.error {
+
+        .form__input,
+        .form__textarea {
+            border-color: #ef4444;
+        }
+
+        .form__error-msg {
+            display: block;
+        }
+    }
+
+    // Success message
+    &__success {
+        display: none;
+        color: #22c55e;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
