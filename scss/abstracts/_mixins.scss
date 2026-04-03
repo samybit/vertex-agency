@@ -1,0 +1,23 @@
+// Flexbox Helpers
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Media Query Manager
+// Desktop-first approach: max-width
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 600px) { @content; } 
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 900px) { @content; }
+  }
+}
