@@ -1,8 +1,10 @@
 # Vertex Digital Agency 🚀
 
+[![Deployment Status](https://img.shields.io/github/actions/workflow/status/samybit/vertex-agency/deploy.yml?style=for-the-badge&logo=github&label=Live%20Deploy&color=0ea5e9)](https://github.com/samybit/vertex-agency/actions)
+
 A modern, multi-page digital agency website designed to showcase clean, maintainable front-end code. Built with a focus on pixel-perfect UI, fluid interactions, and enterprise-grade CSS architecture.
 
-**[🔗 View Live Demo Here](https://samybit.github.io/vertex-agency/)** *(https://samybit.github.io/vertex-agency/)*
+**[🔗 View Live Demo Here](https://samybit.github.io/vertex-agency/)**
 
 ---
 
