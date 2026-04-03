@@ -65,4 +65,42 @@ $(function () {
         }
     });
 
+    // 5. Dynamic Active Navbar Links
+    // Get the name of the current file from the URL (e.g., "about.html")
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+    // Remove the 'active' class from all links
+    $('.navbar__menu-link').removeClass('active');
+
+    // Find the link that matches the current page and add 'active'
+    $(`.navbar__menu-link[href="${currentPath}"]`).addClass('active');
+
+    // 6. Dynamic Tab Title (Visibility API)
+    // Save the original title of the page
+    const originalTitle = document.title;
+
+    // Listen for when the user switches tabs
+    document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+            // User left the tab
+            document.title = "👋 We miss you! - Vertex";
+        } else {
+            // User came back
+            document.title = originalTitle;
+        }
+    });
+
+    // 7. Auto-Generate Title Based on Page URL
+    // Get the filename without the .html extension
+    let pageName = window.location.pathname.split('/').pop().split('.')[0];
+
+    // If we aren't on the homepage, update the title
+    if (pageName && pageName !== 'index') {
+        // Capitalize the first letter (about -> About)
+        pageName = pageName.charAt(0).toUpperCase() + pageName.slice(1);
+
+        // Set the new title
+        document.title = `${pageName} | Vertex Agency`;
+    }
+
 });
