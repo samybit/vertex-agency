@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex | Digital Agency</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <div class="navbar__logo">Vertex<span>.</span></div>
+            <ul class="navbar__menu">
+                <li><a href="index.html" class="navbar__menu-link active">Home</a></li>
+                <li><a href="about.html" class="navbar__menu-link">About</a></li>
+                <li><a href="services.html" class="navbar__menu-link">Services</a></li>
+                <li><a href="contact.html" class="navbar__menu-link">Contact</a></li>
+            </ul>
+            <div class="navbar__toggle">☰</div>
+        </nav>
+    </header>
+
+    <main class="contact section fade-in">
+        <div class="container">
+            <p class="contact__intro">Ready to start your next project? Drop us a line.</p>
+
+            <form id="contactForm" class="form">
+                <div class="form__group">
+                    <input type="text" id="name" class="form__input" placeholder="Your Name">
+                    <div class="form__error-msg">Please enter your name</div>
+                </div>
+                <div class="form__group">
+                    <input type="email" id="email" class="form__input" placeholder="Your Email">
+                    <div class="form__error-msg">Please enter a valid email</div>
+                </div>
+                <div class="form__group">
+                    <textarea id="message" class="form__textarea" placeholder="Your Message"></textarea>
+                    <div class="form__error-msg">Message cannot be empty</div>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <div class="form__success">Thank you! Your message has been sent.</div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2026 Vertex Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
