@@ -1,0 +1,11 @@
+@use '../abstracts' as a;
+
+.services {
+    text-align: center;
+
+    &__intro {
+        max-width: 60rem;
+        margin: 0 auto 4rem;
+        font-size: 1.8rem;
+    }
+}

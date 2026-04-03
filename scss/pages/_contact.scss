@@ -1,0 +1,9 @@
+@use '../abstracts' as a;
+
+.contact {
+    text-align: center;
+
+    &__intro {
+        margin-bottom: 4rem;
+    }
+}

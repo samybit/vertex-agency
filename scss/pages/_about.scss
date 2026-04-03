@@ -1,0 +1,19 @@
+@use '../abstracts' as a;
+
+.about {
+    text-align: center;
+
+    &__text {
+        max-width: 70rem;
+        margin: 0 auto 5rem;
+        font-size: 1.8rem;
+    }
+
+    // CSS Grid
+    &__stats {
+        display: grid;
+        // Makes the cards responsive without media queries
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 3rem;
+    }
+}
